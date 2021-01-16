@@ -4,7 +4,7 @@
             <h4>Napoleon Santana</h4>
         </div>
         <div class="typing-second-linedemo">
-            <h6> Software Engineer at IBM</h6>
+            <h6>&nbsp;Software Engineer</h6>
         </div>
     </div>
 </template>
@@ -47,6 +47,7 @@ export default {
     border-right: 3px solid;
     font-family: monospace;
     font-size: 2em;
+    margin: 8px auto;
 }
 
 @keyframes typingAfter {
@@ -64,9 +65,15 @@ export default {
     opacity: 0% !important;
     border-right: 3px solid; 
   }
+  85% {
+    border-right: 3px solid; 
+  }
+  86% {
+    border-right: 0px solid;
+  }
   99% {
     opacity: 0% !important;
-    border-right: 3px solid;
+    border-right: 0px solid;
   }
   100% {
     opacity: 0% !important;
