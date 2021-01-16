@@ -18,55 +18,77 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 .wrapper {
-  color: #FFFFFF;
-  position: relative;
-  /*This part is important for centering*/
-  width: 255px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  margin: 15px auto;
-  text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    /*This part is important for centering*/
+    width: 255px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    text-align: center;
 }
 
 .typing-demo {
-  width: 250px;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0px solid;
-  font-family: monospace;
-  font-size: 2em;
+    width: 250px;
+    animation: typing 2s steps(22), type .5s step-end alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0px solid;
+    font-family: monospace;
+    font-size: 2em;
 }
 
 .typing-second-linedemo {
-  width: 250px;
-  animation: typing 2s steps(22) forwards, blink .5s step-end alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-  animation-delay: 2s;
-  opacity: 0%;
+    width: 250px;
+    animation: typingAfter 5s steps(22) forwards, type .5s step-end alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
 }
+
+@keyframes typingAfter {
+  0% {
+    opacity: 100% !important;
+    border-right: 0px solid;
+    width: 0;
+  }
+  49% {
+    opacity: 100% !important;
+    border-right: 0px solid;
+    width: 0;
+  }
+  50% {
+    opacity: 0% !important;
+    border-right: 3px solid; 
+  }
+  99% {
+    opacity: 0% !important;
+    border-right: 3px solid;
+  }
+  100% {
+    opacity: 0% !important;
+    border-right: 0px solid;
+  }
+}
+    
 
 @keyframes typing {
   0% {
     width: 0px;
-    opacity: 100%;
-    border-right: 3px solid;
+    border-right: 3px solid; 
   }
   99% {
     border-right: 3px solid;
   }
   100% {
-    opacity: 100%;
     border-right: 0px solid;
   }
 }
     
-@keyframes blink {
+@keyframes type {
   50% {
     border-color: transparent
   }

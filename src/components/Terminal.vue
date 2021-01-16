@@ -49,12 +49,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-body {
-  background: #6D7074;
-}
-
-
+<style lang="scss" scoped>
 .terminal-window {
   text-align: left;
   width: 600px;
@@ -111,22 +106,22 @@ body {
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-webkit-keyframes blink{
+@keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-moz-keyframes blink{
+@keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-
 .terminal-data { display: none; }
 .terminal-window .gray { color: gray; }
 .terminal-window .green { color: green;}

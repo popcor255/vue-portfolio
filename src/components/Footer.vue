@@ -25,13 +25,13 @@ export default {
 
 <style scoped>
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 100px 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 100px 0px;
 }
 
 .icon {
@@ -39,7 +39,7 @@ export default {
     margin: 0 10px;
 }
 
-.icon > a, a:focus, a:active {
+.icon a, a:focus, a:active {
     text-decoration: none;
     color: inherit;
  }
@@ -51,8 +51,8 @@ export default {
 }
 
 .icon {
-  transition: all 0.5s;
-  transform-origin: 50% 50%;
+    transition: all 0.5s;
+    transform-origin: 50% 50%;
 }
 
 </style>
