@@ -55,7 +55,7 @@ export default {
   width: 600px;
   height: 360px;
   border-radius: 10px;
-  margin: 25vh auto;
+  margin: 17.5vh auto;
   position: relative;
 }
 

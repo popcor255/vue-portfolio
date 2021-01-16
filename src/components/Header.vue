@@ -19,13 +19,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 .wrapper {
     color: #FFFFFF;
-    position: relative;
     /*This part is important for centering*/
-    width: 255px;
-    display: block;
-    align-items: center;
-    justify-content: center;
     margin: 15px auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -37,6 +35,7 @@ export default {
     border-right: 0px solid;
     font-family: monospace;
     font-size: 2em;
+    margin: 8px auto;
 }
 
 .typing-second-linedemo {
