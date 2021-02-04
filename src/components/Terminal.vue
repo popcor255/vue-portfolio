@@ -2,36 +2,18 @@
   <div>
     <div>
       <div class="terminal-window">
-      <header>
-        <div class="button green"></div>
-        <div class="button yellow"></div>
-        <div class="button red"></div>
-      </header>
-      <section class="terminal">
-        <div class="history"></div>
-        $&nbsp;<span class="prompt"></span>
-        <span class="typed-cursor"></span>
-        
-      </section>
-    </div>
-    <!-- data -->
-      <div class="terminal-data mimik-run-output">
-        <br>Found 1 feature<br>
-        ----------------------------------------------<br>
-        Feature: Bottles  <span class="gray"># ./features/bottles.feature</span><br><br> 
-
-        &nbsp;&nbsp;Scenario: A bottle falls from the wall<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">Given 100 green bottles are standing</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">when 1 green bottle accidentally falls</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">then there are 99 green bottles standing</span><br>
-        <br>
-            <span class="gray">&nbsp;---------- ----------- ------- -------- --------</span><br>
-        &nbsp;&nbsp;Features&nbsp;&nbsp;&nbsp;Scenarios&nbsp;&nbsp;&nbsp;Steps&nbsp;&nbsp;&nbsp;Passed&nbsp;&nbsp;&nbsp;Failed<br>
-            <span class="gray">&nbsp;---------- ----------- ------- -------- --------</span><br>
-        &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓ 4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0      <br>
-          <br>
-        &nbsp;&nbsp;Completed 1 feature in 0.01s<br>
-          <br>
+        <header>
+          <div class="button green"></div>
+          <div class="button yellow"></div>
+          <div class="button red"></div>
+        </header>
+        <section class="terminal">
+          <div id="terminal-data">
+            <vue-typed-js :strings=commands>
+              <p>$&nbsp; <span class="typing"></span></p>
+            </vue-typed-js>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -42,14 +24,37 @@ export default {
   name: 'Terminal',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      commands : getTerminalData()
+    }
   }
 }
 
+const getTerminalData = () => {
+  return  [`^3500 Hello. \`👋👋👋👋\` I hope you are doing well. 😀
+  <br />$ kind create cluster
+  \`<br /> Creating cluster "kind" ... \`
+  \`<br />  <span style="color: green;"> ✓ </span> Ensuring node image (kindest/node:v1.19.1) 🖼 \`
+  \`<br />  <span style="color: green;"> ✓ </span> Preparing nodes 📦  \`
+  \`<br />  <span style="color: green;"> ✓ </span> Writing configuration 📜 \`
+  \`<br />  <span style="color: green;"> ✓ </span> Starting control-plane 🕹️ \`
+  \`<br />  <span style="color: green;"> ✓ </span> Installing CNI 🔌 \`
+  \`<br />  <span style="color: green;"> ✓ </span> Installing StorageClass 💾 \`
+  \`<br />Set kubectl context to "kind-kind" \`
+  \`<br />You can now use your cluster with: \`
+  \`<br />\`
+  \`<br />Not sure what to do next? 😅  Check out https://kind.sigs.k8s.io/docs/user/quick-start/\`
+  <br />$ ⏳ Time to install my resume as a kubernetes CRD, but
+  <br />$ ... you wouldn't install it without reading it first? 😉
+  <br />$ \`<a href="https://raw.githubusercontent.com/popcor255/resume/main/resume.yaml" style="text-decoration: none; color: inherit;">https://git.io/Jtu7M\`</a>`]
+}
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style scoped>
 .terminal-window {
   text-align: left;
   width: 600px;
@@ -124,5 +129,4 @@ export default {
 }
 .terminal-data { display: none; }
 .terminal-window .gray { color: gray; }
-.terminal-window .green { color: green;}
 </style>

@@ -29,7 +29,7 @@ export default {
 
 .typing-demo {
     width: 250px;
-    animation: typing 2s steps(22), type .5s step-end alternate;
+    animation: typing 1.6s steps(22), type .5s step-end alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 0px solid;
@@ -40,7 +40,7 @@ export default {
 
 .typing-second-linedemo {
     width: 250px;
-    animation: typingAfter 5s steps(22) forwards, type .5s step-end alternate;
+    animation: typingAfter 3.4s steps(22) forwards, type .5s step-end alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;

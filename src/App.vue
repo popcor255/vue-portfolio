@@ -28,6 +28,9 @@ export default {
 * {
   margin: 0px;
   padding: 0px;
-  background-color: #44494D;
+}
+
+body {
+    background-color: #44494D;
 }
 </style>
