@@ -1,0 +1,50 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: resumes.napa.dev
+  labels:
+    version: "devel"
+spec:
+  group: napa.dev
+  versions:
+  - name: v1beta1
+    served: true
+    storage: true
+  names:
+    kind: Resume
+    plural: resumes
+  scope: Namespaced
+  version: v1beta1
+---
+apiVersion: napa.dev/v1beta1
+kind: Resume
+metadata:
+  name: napoleon-santana
+  annotations:
+    resume/full-name: Napoleon Santana
+    resume/website: https://www.linkedin.com/in/nap-san/
+    resume/github: https://github.com/popcor255
+spec:
+  skills:
+  - Kubernetes APIs
+  - Full Stack Web Development
+  - DevOps
+status:
+  employment:
+  - company: IBM
+    duration: 2019 - present
+  - company: Estee Lauder
+    duration: 2019 - 2019
+  - company: Genmarketing Co.
+    duration: 2017 - 2018
+  - company: Etag Technologies
+    duration: 2016 - 2016
+  education:
+  - name: New Jersey City University
+    degree: Bachelors of Science
+    major: Computer Science
+    gpa: 3.9
+    graduated: 2019
+  extraCurriculars:
+  - Drinking Coffee. ☕
+  - Finding cool ideas on github. https://raw.githubusercontent.com/ImJasonH/ImJasonH/main/resume-crd.yaml
