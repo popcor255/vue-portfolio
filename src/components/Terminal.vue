@@ -48,7 +48,7 @@ const getTerminalData = () => {
   \`<br />Not sure what to do next? 😅  Check out https://kind.sigs.k8s.io/docs/user/quick-start/\`
   <br />$ ⏳ Time to install my resume as a kubernetes CRD, but
   <br />$ ... you wouldn't install it without reading it first? 😉
-  <br />$ \`<a href="https://raw.githubusercontent.com/popcor255/resume/main/resume.yaml" style="text-decoration: none; color: inherit;">https://git.io/Jtu7M\`</a>`]
+  <br />$ \`<a href="https://raw.githubusercontent.com/popcor255/vue-portfolio/main/resume.yaml" style="text-decoration: none; color: inherit;">https://git.io/Jtw2z\`</a>`]
 }
 
 </script>
